@@ -7,7 +7,31 @@
     <title>My Project</title>
 </head>
 <body>
-    <include src="components/navbar.html"></include>
+    <include src="components/navbar1.html"></include>
+    <main class="flex flex-col items-center py-12 px-4">
+        <h1 class="text-4xl font-extrabold text-center mb-6 drop-shadow-md">LYRICAL NOTE</h1>
+    
+        <div class="bg-white text-black w-full max-w-xl p-6 rounded-xl shadow-lg">
+          <p class="mb-4 text-lg">
+            This page lets users analyze how the lyrics of a song correspond to its musical structure, exploring the relationship between melody, harmony, and lyrical phrasing.
+          </p>
+    
+          <textarea placeholder="Paste your text" class="w-full h-40 p-4 border border-gray-300 rounded-md resize-none mb-4 focus:outline-none focus:ring-2 focus:ring-[#9d7c5b]"></textarea>
+    
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-600">0/5,000 characters</span>
+            <div class="flex items-center gap-2">
+              <button class="text-sm px-3 py-1 border rounded text-[#9d7c5b] border-[#9d7c5b] hover:bg-[#9d7c5b] hover:text-white transition">Upgrade</button>
+              <button class="text-sm px-3 py-1 border rounded text-[#9d7c5b] border-[#9d7c5b] hover:bg-[#9d7c5b] hover:text-white transition">Upload</button>
+              <button class="bg-black text-white px-4 py-2 rounded-md font-semibold hover:bg-gray-800 transition">Scan Lyrics</button>
+            </div>
+          </div>
+        </div>
+        <div id="analysisSection" class="hidden bg-[#62442f] text-white mt-8 w-full max-w-xl p-6 rounded-xl shadow-md">
+            <h2 class="text-xl font-bold mb-2">Analysis</h2>
+            <p class="text-sm">Verse 1 features rising melodic motion, aligning with lyrical emphasis on emotional peaks. Rhythmic stress appears on beats 2 and 4, enhancing the expressive delivery.</p>
+          </div>
+      </main>
     <include src="components/footer.html"></include>
 </body>
 </html>
