@@ -5,9 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/styles/main.css">
     <title>My Project</title>
-</head>
+   
+   </head>
 <body>
-    <include src="components/navbar.html"></include>
-    <include src="components/footer.html"></include>
+
+
+  <div class="sticky top-0">
+    <include src="components/navbar.html" class="sticky top-0"></include>
+  </div>
+  <hr>
+  <br>
+  <br>
+  <br>
+
+    <h1 class="text-center text-4xl font-bold">Music drag and Drop</h1>
+    <br>
+    
+    <br>
+    <h3 class="text-center text-2xl font-bold">Whatevever song or sound/style you want to learn 
+        drag it and drop we will break it down for you !</h3>
+        <br>
+        <br>
+        <br>
+
+
+<p class="text-center text-lg font-bold"> Drag it Here We will Give you your results </p>
+
+
+
+<div class="container">
+  <div id="dragbox" draggable="true">
+    Music
+  </div>
+  <div id="dropzone">
+    Drop here
+  </div>
+</div>
+
+<script>
+  const dragbox = document.getElementById('dragbox');
+  const dropzone = document.getElementById('dropzone');
+
+  // Custom drag image with rounded corners
+  dragbox.ondragstart = function(event) {
+    event.dataTransfer.setData('text/plain', 'dragbox');
+    const node = dragbox.cloneNode(true);
+    node.style.position = 'absolute';
+    node.style.top = '-9999px';
+    document.body.appendChild(node);
+    event.dataTransfer.setDragImage(node, 100, 50);
+    setTimeout(() => document.body.removeChild(node), 0);
+  };
+
+  // Allow drop and highlight dropzone
+  dropzone.ondragover = function(event) {
+    event.preventDefault();
+    dropzone.classList.add('active');
+  };
+  dropzone.ondragleave = function(event) {
+    dropzone.classList.remove('active');
+  };
+
+  // Handle drop
+  dropzone.ondrop = function(event) {
+    event.preventDefault();
+    dropzone.classList.remove('active');
+    if (document.getElementById('dragbox')) {
+      dropzone.appendChild(dragbox);
+      dragbox.style.margin = "auto";
+    }
+  }
+</script>
+<br>
+<br>
+<br>
+<hr>
+
+
+
+<div class=" sticky bottom-0">
+<include src="components/footer.html" class="sticky bottom-0"></include>
+</div>
+
 </body>
 </html>
