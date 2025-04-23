@@ -29,7 +29,7 @@ h1, h2, h3 {
   }
 
 
-  #team{
+  .team{
     justify-self: center;
     margin-top: 50px
     }
@@ -81,8 +81,8 @@ h1, h2, h3 {
     }
 
     .image-container {
-      max-width: 100%;
-      margin: 20px auto;
+      display: flex;
+      justify-content: center;
       border: 8px solid #fcbf6a;
       border-radius: 15px;
       overflow: hidden;
