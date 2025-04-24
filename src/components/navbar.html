@@ -1,10 +1,51 @@
-
 <nav class="sticky top-0 z-50 bg-[#693718] shadow-md">
-    <ul class="flex justify-end space-x-8 p-4 pr-8"><li><a href="index.html" class="text-orange-100 border border-orange-200 bg-yellow-900 py-2 px-6 rounded-full hover:shadow-lg hover:shadow-orange-200 transition-all duration-300">HOMEPAGE</a></li>
-      <li><a href="MusicDragDrop.html" class="text-orange-100 border border-orange-200 bg-yellow-900 py-2 px-6 rounded-full hover:shadow-lg hover:shadow-orange-200 transition-all duration-300">MUSIC DRAG DROP</a></li>
-      <li><a href="Lyricalnote.html" class="text-orange-100 border border-orange-200 bg-yellow-900 py-2 px-6 rounded-full hover:shadow-lg hover:shadow-orange-200 transition-all duration-300">LYRICAL NOTE</a></li>
-      <li><a href="Sheetbreakdown.html" class="text-orange-100 border border-orange-200 bg-yellow-900 py-2 px-6 rounded-full hover:shadow-lg hover:shadow-orange-200 transition-all duration-300">SHEET BREAKDOWN</a></li>
-      <li><a href="Team.html" class="text-orange-100 border border-orange-200 bg-yellow-900 py-2 px-6 rounded-full hover:shadow-lg hover:shadow-orange-200 transition-all duration-300">TEAM</a></li>
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-4 py-3 md:py-4 md:px-8">
+    <div class="text-orange-100 font-bold text-xl">SoundSage</div>
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="md:hidden text-orange-100 focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
 
+    <!-- Navigation Links -->
+    <div id="nav-menu" class="hidden w-full md:w-auto md:flex md:items-center">
+      <ul class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 mt-4 md:mt-0">
+        <li>
+          <a href="index.html" class="text-orange-100 border border-orange-200 bg-yellow-900 py-2 px-6 rounded-full hover:shadow-lg hover:shadow-orange-200 transition-all duration-300 block text-center md:inline-block">HOMEPAGE</a>
+        </li>
+        <li>
+          <a href="MusicDragDrop.html" class="text-orange-100 border border-orange-200 bg-yellow-900 py-2 px-6 rounded-full hover:shadow-lg hover:shadow-orange-200 transition-all duration-300 block text-center md:inline-block">MUSIC DRAG DROP</a>
+        </li>
+        <li>
+          <a href="Lyricalnote.html" class="text-orange-100 border border-orange-200 bg-yellow-900 py-2 px-6 rounded-full hover:shadow-lg hover:shadow-orange-200 transition-all duration-300 block text-center md:inline-block">LYRICAL NOTE</a>
+        </li>
+        <li>
+          <a href="Sheetbreakdown.html" class="text-orange-100 border border-orange-200 bg-yellow-900 py-2 px-6 rounded-full hover:shadow-lg hover:shadow-orange-200 transition-all duration-300 block text-center md:inline-block">SHEET BREAKDOWN</a>
+        </li>
+        <li>
+          <a href="Team.html" class="text-orange-100 border border-orange-200 bg-yellow-900 py-2 px-6 rounded-full hover:shadow-lg hover:shadow-orange-200 transition-all duration-300 block text-center md:inline-block">TEAM</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+<script>
+  // Mobile menu toggle
+  const menuButton = document.getElementById('mobile-menu-button');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuButton.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+    menuButton.setAttribute('aria-expanded', navMenu.classList.contains('hidden') ? 'false' : 'true');
+  });
+
+  // Close menu on larger screens
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      navMenu.classList.remove('hidden');
+    }
+  });
+</script>
 
