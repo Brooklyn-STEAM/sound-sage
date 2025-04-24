@@ -84,7 +84,7 @@ h1, h2, h3 {
     .image-container {
       display: flex;
       justify-content: center;
-      border: 8px solid #fcbf6a;
+      border: 8px solid #D4b499;
       border-radius: 15px;
       overflow: hidden;
       box-shadow: 0 0 20px rgb(240, 174, 93);
