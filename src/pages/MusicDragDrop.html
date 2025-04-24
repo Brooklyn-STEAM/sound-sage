@@ -1,101 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/styles/main.css">
-    <title>My Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <title>My Project</title>
 
 </head>
-<body>
-
-
-</head>
-<body>
-
-   
-   </head>
-   <include src="components/navbar.html" class="sticky top-0"></include>
-  
-
-
 
    <body>
 
+ <include src="components/navbar.html" class="sticky top-0"></include>
 
-  <hr>
-  <br>
-  <br>
-  <br>
 
-    <h1 class="text-center text-4xl font-bold">Music drag and Drop</h1>
-    <br>
+    <main class="max-w-6xl mx-auto px-4 py-12">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
     
-    <br>
-    <h3 class="text-center text-2xl font-bold">Whatevever song or sound/style you want to learn 
-        drag it and drop we will break it down for you !</h3>
-        <br>
-        <br>
-        <br>
+        <div>
+          <h1 class="text-4xl font-extrabold text-[#5a3d2d] mb-6">Music Drag and Drop</h1>
+          <h3 class="text-xl font-medium mb-4">Whatever song or sound/style you want to learn, drag it and drop — we will break it down for you!</h3>
+          <p class="text-lg font-semibold mb-8">Drag it here — we’ll give you your results</p>
+  
+          <div class="flex flex-row items-start gap-6">
+            <div id="dragbox" draggable="true" class="w-40 h-20 flex items-center justify-center bg-[#e4c9b4] text-[#3a2d2d] font-bold rounded-xl shadow-md cursor-move hover:scale-105 transition-transform duration-300">
+              Music
+            </div>
+            <div id="dropzone" class="w-60 h-32 border-4 border-dashed border-[#9d7c5b] rounded-xl flex items-center justify-center text-[#9d7c5b] text-lg font-semibold hover:bg-[#f9f5f0] transition-colors duration-300">
+              Drop here
+            </div>
+          </div>
+        </div>
+  
+        
+        <div class="bg-[#f9f5f0] border border-[#d2b08f] rounded-xl p-6 shadow-md">
+          <h2 class="text-2xl font-bold text-[#5a3d2d] mb-4">What is this page?</h2>
+          <p class="text-[#3a2d2d] text-base leading-relaxed">
+            This tool is designed for musicians, learners, and enthusiasts to analyze any music or sound they want to understand. Simply drag and drop your music file into the left-hand area, and we’ll break it down into its musical elements such as chords, rhythm, notes, and structure. A fun, easy way to learn music!
+          </p>
+        </div>
+      </div>
+    </main>
+  
+    <script>
+      const dragbox = document.getElementById('dragbox');
+      const dropzone = document.getElementById('dropzone');
+  
+      dragbox.ondragstart = function (event) {
+        event.dataTransfer.setData('text/plain', 'dragbox');
+        const node = dragbox.cloneNode(true);
+        node.style.position = 'absolute';
+        node.style.top = '-9999px';
+        document.body.appendChild(node);
+        event.dataTransfer.setDragImage(node, 100, 50);
+        setTimeout(() => document.body.removeChild(node), 0);
+      };
+  
+      dropzone.ondragover = function (event) {
+        event.preventDefault();
+        dropzone.classList.add('ring', 'ring-yellow-500');
+      };
+      dropzone.ondragleave = function (event) {
+        dropzone.classList.remove('ring', 'ring-yellow-500');
+      };
+  
+      dropzone.ondrop = function (event) {
+        event.preventDefault();
+        dropzone.classList.remove('ring', 'ring-yellow-500');
+        if (document.getElementById('dragbox')) {
+          dropzone.appendChild(dragbox);
+          dragbox.style.margin = "auto";
+        }
+      };
+    </script>
+    
 
 
-<p class="text-center text-lg font-bold"> Drag it Here We will Give you your results </p>
+    <footer class="bg-[#6F4E37] text-white py-5 mt-7">
+      <include src="components/footer.html"></include>
+    </footer>
 
+  </body>
 
-
-<div class="container">
-  <div id="dragbox" draggable="true">
-    Music
-  </div>
-  <div id="dropzone">
-    Drop here
-  </div>
-</div>
-
-<script>
-  const dragbox = document.getElementById('dragbox');
-  const dropzone = document.getElementById('dropzone');
-
-  // Custom drag image with rounded corners
-  dragbox.ondragstart = function(event) {
-    event.dataTransfer.setData('text/plain', 'dragbox');
-    const node = dragbox.cloneNode(true);
-    node.style.position = 'absolute';
-    node.style.top = '-9999px';
-    document.body.appendChild(node);
-    event.dataTransfer.setDragImage(node, 100, 50);
-    setTimeout(() => document.body.removeChild(node), 0);
-  };
-
-  // Allow drop and highlight dropzone
-  dropzone.ondragover = function(event) {
-    event.preventDefault();
-    dropzone.classList.add('active');
-  };
-  dropzone.ondragleave = function(event) {
-    dropzone.classList.remove('active');
-  };
-
-  // Handle drop
-  dropzone.ondrop = function(event) {
-    event.preventDefault();
-    dropzone.classList.remove('active');
-    if (document.getElementById('dragbox')) {
-      dropzone.appendChild(dragbox);
-      dragbox.style.margin = "auto";
-    }
-  }
-</script>
-<br>
-<br>
-<br>
-<hr>
-
-
-
-<div class=" sticky bottom-0">
-<include src="components/footer.html" class="sticky bottom-0"></include>
-</div>
-
-</body>
 </html>

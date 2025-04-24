@@ -2,10 +2,10 @@
 
 
 html{
-  background: burlywood;
-  color: aliceblue;
+  background-color: #F8EDE3;
+  color: #91684A;
   font-family: 'Poppins', Arial, Helvetica, sans-serif; /* Use a modern Google Font */
-  color: rgb(255, 255, 255); /* Vibrant pink for text */
+  color: #91684A; /* Vibrant pink for text */
   font-size: larger;
 
 }
@@ -45,7 +45,7 @@ h1, h2, h3 {
       width: 200px;
       height: 100px;
       border-radius: 16px;
-      background: rgb(225, 178, 107);
+      background: #74512D;
       overflow: hidden;
       display: flex;
       align-items: center;
