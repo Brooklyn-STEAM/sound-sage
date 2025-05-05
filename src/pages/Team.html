@@ -1,77 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/styles/main.css">
-    <title>My Project</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <title>My Project</title>
 </head>
-<body>
-    <include src="components/navbar1.html"></include>
-    <h1 class="text-center text-4xl m-8">The Team</h1>
 
-    <div class=" m-16 flex mx-auto gap-8 content-center sapce-evenlyn justify-center">  
-        <div id="team">
-            <img src="/src/assets/images/Prity.png" alt="img-of-prittey" class="h-[200px] image-container">
-            <h1 class="text-center text-2xl underline">Jannatul Prity</h1>
-            <p></p>
-            <a herf="">
-                <i class="icon-[brandico--instagram] size-8"></i>
-            </a>
-            <a href="https://github.com/JannatulP49">
-                <i class="icon-[logos--github-icon] size-8"></i>
-            </a>
-            <a href="mailto:Prityjannutul49@gmail.com">
-                <i class="icon-[logos--google-gmail] size-8"></i>
-            </a>
-        </div>
-        <div class="flex flex-col items-center">
-            <img src="/src/assets/images/joshua.png" alt="img-of-joshua" class="h-[200px] image-container">
-            <h1 class="text-center text-2xl">Joshua Lewin</h1>
-            <div class="content-center inline-block ">
-                <a herf="">
-                    <i class="icon-[brandico--instagram] size-8"></i>
-                </a>
-                <a href="https://github.com/joshuaFSDclass">
-                    <i class="icon-[logos--github-icon] size-8"></i>
-                </a>
-                <a href="mailto:lewinjoshua9@gmail.com">
-                    <i class="icon-[logos--google-gmail] size-8"></i>
-                </a>
-            </div>
-        </div>
-        <div class="flex flex-col items-center">
-            <img src="/src/assets/images/jeriah.png" alt="img-of-jeriah" class="h-[200px] image-container">
-            <h1 class="text-center text-2xl">Jeriah Oliverasfair</h1>
-            <div class="content-center inline-block ">
-                <a href="mailto:joliverasfair@brooklynsteamcenter.org">
-                    <i class="icon-[brandico--instagram] size-8"></i>
-                </a>
-                <a href="https://github.com/J3r1ah">
-                    <i class="icon-[logos--github-icon] size-8"></i>
-                </a>
-                <a href="">
-                    <i class="icon-[logos--google-gmail] size-8" href></i>
-                </a>
-            </div>
-        </div>
-        <div class="flex flex-col items-center">
-            <img src="/src/assets/images/donaldson.jpg" alt="img-of-dondaldson" class="h-[200px] image-container">
-            <h1 class="text-center text-2xl">Donaldson Jean</h1>
-            <div class="content-center inline-block ">
-                <a href="https://www.instagram.com/don_yboi/">
-                    <i class="icon-[brandico--instagram] size-8"></i>
-                </a>
-                <a href="https://github.com/Donyboi">
-                    <i class="icon-[logos--github-icon] size-8"></i>
-                </a>
-                <a href="mailto:djean2@brooklynsteamcenter.org">
-                    <i class="icon-[logos--google-gmail] size-8"></i>
-                </a>
-            </div>
-        </div>
+<body class="bg-[#fefcfb] text-[#5a3d2d]">
+  <include src="components/navbar1.html"></include>
+
+  <!-- Heading -->
+  <h1 class="text-center text-2xl sm:text-3xl md:text-4xl font-bold mt-8 mb-6">The Team</h1>
+
+  <!-- Team Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 sm:px-8 max-w-7xl mx-auto">
+    
+    <!-- Team Member 1 -->
+    <div class="flex flex-col items-center text-center bg-white p-4 rounded-xl shadow">
+      <img src="src/components/images/Prity_2658.png" alt="img-of-pritty" class="h-48 w-48 object-cover rounded-full mb-4" />
+      <h2 class="text-xl font-semibold underline">Jannatul Prity</h2>
+      <p class="text-sm mt-1">Bio: Hi! I am a Full-Stack Developer creating a well constructed website, turning my imagination into reality.</p>
     </div>
-    <include src="components/footer.html"></include>
-   
+
+    <!-- Team Member 2 -->
+    <div class="flex flex-col items-center text-center bg-white p-4 rounded-xl shadow">
+      <img src="src/components/images/joshua.png" alt="img-of-joshua" class="h-48 w-48 object-cover rounded-full mb-4" />
+      <h2 class="text-xl font-semibold underline">Joshua Lewin</h2>
+      <p class="text-sm mt-1">Bio: Hi! I am a Full-Stack Developer I created the idea of our project! Formulating a well constructed website.</p>
+    </div>
+
+    <!-- Team Member 3 -->
+    <div class="flex flex-col items-center text-center bg-white p-4 rounded-xl shadow">
+      <img src="src/components/images/jeriah.png" alt="img-of-jeriah" class="h-48 w-48 object-cover rounded-full mb-4" />
+      <h2 class="text-xl font-semibold underline">Jeriah Oliverasfair</h2>
+      <p class="text-sm mt-1">Bio: Hi! I am a Full-Stack Developer I helped code and expressed my love for music!</p>
+    </div>
+
+    <!-- Team Member 4 -->
+    <div class="flex flex-col items-center text-center bg-white p-4 rounded-xl shadow">
+      <img src="src/components/images/donaldson.jpg" alt="img-of-donaldson" class="h-48 w-48 object-cover rounded-full mb-4" />
+      <h2 class="text-xl font-semibold underline">Donaldson Jean</h2>
+      <p class="text-sm mt-1">Bio: Hi! I am a Full-Stack Developer creating a well constructed website. I am facinated in developing games! </p>
+    </div>
+  </div>
+
+  <include src="components/footer.html"></include>
+
 </body>
 </html>
