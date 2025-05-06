@@ -8,59 +8,49 @@
   <title>My Project</title>
 </head>
 
+<body>
 
-<body class="bg-[#fefcfb] text-[#3a2d2d]">
-  <!-- Navbar -->
   <include src="components/navbar1.html" class="sticky top-0"></include>
 
 
-  <!-- Main Content -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-      
-      <!-- Left Section -->
-      <div>
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#5a3d2d] mb-4 sm:mb-6">
-          Music Drag and Drop
-        </h1>
-        <h3 class="text-lg sm:text-xl font-medium mb-3 sm:mb-4">
-          Whatever song or sound/style you want to learn, drag it and drop — we will break it down for you!
-        </h3>
-        <p class="text-base sm:text-lg font-semibold mb-6">
-          Drag it here — we’ll give you your results
-        </p>
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-2 gap-10 items-start">
 
-        <!-- Drag & Drop -->
-        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-          <div
-            id="dragbox"
-            draggable="true"
-            class="w-40 h-20 flex items-center justify-center bg-[#e4c9b4] text-[#3a2d2d] font-bold rounded-xl shadow-md cursor-move hover:scale-105 transition-transform duration-300"
-          >
+      <div>
+        <h1 class="text-4xl font-extrabold text-[#5a3d2d] mb-6">Music Drag and Drop</h1>
+        <h3 class="text-xl font-medium mb-4">Whatever song or sound/style you want to learn, drag it and drop — we will
+          break it down for you!</h3>
+        <p class="text-lg font-semibold mb-8">Drag it here — we’ll give you your results</p>
+
+        <div class="flex flex-col md:flex-row items-start gap-6">
+          <div id="dragbox" draggable="true"
+            class="w-40 h-20 flex items-center justify-center bg-[#e4c9b4] text-[#3a2d2d] font-bold rounded-xl shadow-md cursor-move hover:scale-105 transition-transform duration-300">
             Music
           </div>
-          <div
-            id="dropzone"
-            class="w-full sm:w-60 h-32 border-4 border-dashed border-[#9d7c5b] rounded-xl flex items-center justify-center text-[#9d7c5b] text-base font-semibold hover:bg-[#f9f5f0] transition-colors duration-300"
-          >
+          <div id="dropzone"
+            class="w-60 h-32 border-4 border-dashed border-[#9d7c5b] rounded-xl flex items-center justify-center text-[#9d7c5b] text-lg font-semibold hover:bg-[#f9f5f0] transition-colors duration-300">
+
             Drop here
           </div>
         </div>
       </div>
 
-      <!-- Right Section -->
-      <div class="bg-[#f9f5f0] border border-[#d2b08f] rounded-xl p-5 sm:p-6 shadow-md">
-        <h2 class="text-xl sm:text-2xl font-bold text-[#5a3d2d] mb-3 sm:mb-4">What is this page?</h2>
-        <p class="text-sm sm:text-base leading-relaxed">
-          This tool is designed for musicians, learners, and enthusiasts to analyze any music or sound they want to understand. 
-          Simply drag and drop your music file into the left-hand area, and we’ll break it down into its musical elements such 
-          as chords, rhythm, notes, and structure. A fun, easy way to learn music!
+
+
+      <div class="bg-[#f9f5f0] border border-[#d2b08f] rounded-l-2xl p-6 overflow-auto shadow-md">
+        <h2 class="text-2xl font-bold text-[#5a3d2d] mb-4">What is this page?</h2>
+        <p class="text-[#3a2d2d] text-base leading-relaxed">
+          This tool is designed for musicians, learners, and enthusiasts to analyze any music or sound they want to
+          understand. Simply drag and drop your music file into the left-hand area, and we’ll break it down into its
+          musical elements such as chords, rhythm, notes, and structure. A fun, easy way to learn music!
+
         </p>
       </div>
     </div>
   </main>
 
-  <!-- Script -->
+
+
   <script>
     const dragbox = document.getElementById('dragbox');
     const dropzone = document.getElementById('dropzone');
@@ -80,6 +70,9 @@
       dropzone.classList.add('ring', 'ring-yellow-500');
     };
 
+
+
+
     dropzone.ondragleave = function (event) {
       dropzone.classList.remove('ring', 'ring-yellow-500');
     };
@@ -94,10 +87,15 @@
     };
   </script>
 
-  <!-- Footer -->
-  <footer class="bg-[#6F4E37] text-white py-5 mt-12">
+
+
+
+  <footer class="bg-[#6F4E37] text-white py-5 mt-7">
     <include src="components/footer.html"></include>
   </footer>
+
+
+
 </body>
 
 </html>
