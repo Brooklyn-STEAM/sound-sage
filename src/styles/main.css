@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@iconify/tailwind4";
 
 
 html{
@@ -29,7 +30,7 @@ h1, h2, h3 {
   }
 
 
-  #team{
+  .team{
     justify-self: center;
     margin-top: 50px
     }
@@ -81,9 +82,9 @@ h1, h2, h3 {
     }
 
     .image-container {
-      max-width: 100%;
-      margin: 20px auto;
-      border: 8px solid #fcbf6a;
+      display: flex;
+      justify-content: center;
+      border: 8px solid #D4b499;
       border-radius: 15px;
       overflow: hidden;
       box-shadow: 0 0 20px rgb(240, 174, 93);
