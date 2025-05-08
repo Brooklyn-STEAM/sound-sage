@@ -4,18 +4,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Sound Sage is a music learning platform that helps aspiring musicians understand and break down their favorite songs through interactive tools and music theory analysis.">
-  <meta name="keywords"
-    content="Sound Sage, music learning, song breakdown, music theory, music education, musician tools, interactive music learning, music analysis">
+
+  <meta name="description" content="Sound Sage is a music learning platform that helps aspiring musicians understand and break down their favorite songs through interactive tools and music theory analysis.">
+  <meta name="keywords" content="Sound Sage, music learning, song breakdown, music theory, music education, musician tools, interactive music learning, music analysis">
+
   <meta name="author" content="Sound Sage">
   <link rel="stylesheet" href="/src/styles/main.css" />
   <link rel="shortcut icon" href="/src/components/images/Logo.png" type="image/x-icon">
   <title>SoundSage</title>
 </head>
 
-<body class="bg-[#fefcfb] text-[#5a3d2d]">
+<body class="bg-[#fefcfb] text-[#704a35]">
   <include src="components/navbar1.html"></include>
+
+  
+   
+  
+
+<section class="relative bg-[#926f51] text-white h-screen flex items-center overflow-hidden group">
+
+  
+  <div class="relative z-10 max-w-5xl mx-auto px-4">
+    <div class="max-w-2xl space-y-6 transition-all duration-700 ease-out translate-y-10 group-hover:translate-y-0">
+      <h1 class="text-5xl sm:text-6xl font-bold leading-tight">
+        Discover Music<br>Your Way
+      </h1>
+      <p class="text-xl text-gray-200">
+        Dream big, build fast, and grow far with Sound Sage.
+      </p>
+
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+        <button class="bg-white text-[#5e3d2d] font-semibold py-3 px-6 rounded-full shadow hover:bg-gray-100 hover:scale-105 transition-transform duration-300">
+          Learn More! <span class="ml-2">→</span>
+        </button>
+        <span class="text-sm text-[#fff]">
+          Explore Your Inner Musician 
+        </span>
+      </div>
+
+      <a href="Team.html" class="text-sm text-white underline hover:text-gray-300 transition duration-300">
+        Learn More About Us!
+      </a>
+    </div>
+  </div>
+</section>
+
+
 
 
   <section class="text-center py-8 px-4 sm:px-6">
@@ -29,8 +63,8 @@
   </section>
 
 
-  <section
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 pb-10 max-w-6xl mx-auto text-center">
+  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 pb-10 max-w-6xl mx-auto text-center">
+
     <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-md">
       <h3 class="text-lg sm:text-xl font-bold mb-2">Upload Your Song</h3>
       <p>Drag and drop any music file to instantly start breaking it down into chords, notes, and progressions.</p>
@@ -47,14 +81,12 @@
 
 
   <section class="flex justify-center px-6 pb-16">
-    <div
-      class="transition-transform duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl fancy-border">
+    <div class="transition-transform duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl fancy-border">
       <img src="/src/components/images/musicsheet.png" alt="Sheet Music" class="rounded-xl max-w-sm w-3 md:w-xl" />
     </div>
   </section>
 
-
   <include src="components/footer.html"></include>
 </body>
-
 </html>
+
