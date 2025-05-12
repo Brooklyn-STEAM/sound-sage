@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+
+  <meta name="description" content="Sound Sage is a music learning platform that helps aspiring musicians understand and break down their favorite songs through interactive tools and music theory analysis.">
+<meta name="keywords" content="Sound Sage, music learning, song breakdown, music theory, music education, musician tools, interactive music learning, music analysis">
+<meta name="author" content="Sound Sage">
+ <title>SoundSage</title>
+  <link rel="shortcut icon" href="/src/components/images/Logo.png" type="image/x-icon">
+ 
+
+</head>
+
+<body class="bg-[#fefcfb] text-[#5a3d2d]">
+  <include src="components/navbar1.html"></include>
+
+  <main class="flex flex-col items-center py-10 px-4 sm:px-6">
+
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center mb-6 drop-shadow-md">
+      SHEET BREAKDOWN
+    </h1>
+
+
+    <div class="bg-white text-black w-full max-w-lg p-4 sm:p-6 rounded-xl shadow-lg">
+      <p class="mb-4 text-base sm:text-lg">
+       Scanning the Fur Elis ...........
+      </p>
+
+      <textarea
+        placeholder="A – E – A – A – E – A – C – B – A – G# – A – E – A – A – E – A+E – A
+        
+        Intermediate Level:
+Für Elise is typically classified as an intermediate-level piece, around grade 5 in some systems. 
+Technical Demands:
+It requires a certain level of hand coordination, rhythm independence, and the ability to play fast scales and arpeggios. 
+Full Version:
+The full version of Für Elise is more challenging, involving more intricate playing and faster passages. 
+Shortened Versions:
+Some simplified versions of Für Elise can be accessible to late beginners, but still require some practice and patience. 
+Practice and Persistence:
+Learning Für Elise, even a shortened version, requires consistent practice and attention to detail, especially regarding timing and accuracy. 
+"
+        class="w-full h-40 p-3 sm:p-4 border border-gray-300 rounded-md resize-none mb-4 focus:outline-none focus:ring-2 focus:ring-[#9d7c5b]"
+      ></textarea>
+
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-2">
+        <span class="text-sm text-gray-600 text-center sm:text-left">766/5,000 characters</span>
+        
+        <div class="flex flex-col sm:flex-row gap-2">
+          <button class="text-sm px-4 py-2 border rounded text-[#9d7c5b] border-[#9d7c5b] hover:bg-[#9d7c5b] hover:text-white transition">
+            Upgrade
+          </button>
+          <button class="text-sm px-4 py-2 border rounded text-[#9d7c5b] border-[#9d7c5b] hover:bg-[#9d7c5b] hover:text-white transition">
+            Upload
+          </button>
+          <a href="sheetDem.html">
+            <button class="bg-[#8d6b4a] text-white px-4 py-2 rounded-md font-semibold hover:bg-[#5a3d2d] transition">
+            Scan Lyrics
+          </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="analysisSection" class="hidden bg-[#62442f] text-white mt-8 w-full max-w-lg p-4 sm:p-6 rounded-xl shadow-md">
+      <h2 class="text-lg sm:text-xl font-bold mb-2">Analysis</h2>
+      <p class="text-sm">
+        Verse 1 features rising melodic motion, aligning with lyrical emphasis on emotional peaks. Rhythmic stress appears on beats 2 and 4, enhancing the expressive delivery.
+      </p>
+    </div>
+  </main>
+
+  <include src="components/footer.html"></include>
+</body>
+</html>

@@ -73,13 +73,8 @@ h1, h2, h3 {
       background: #ffe5b4;
     }
 
-    footer{
-      position: sticky;
-      bottom: 0;
-      margin-bottom: auto;
-
-
-    }
+    /* footer
+    } */
 
     .image-container {
       display: flex;
