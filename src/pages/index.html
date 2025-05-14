@@ -14,16 +14,22 @@
   <link rel="stylesheet" href="/src/styles/main.css" />
   <link rel="shortcut icon" href="/src/components/images/Logo.png" type="image/x-icon">
   <title>SoundSage</title>
+  <style>
+    .picture{
+      background-size: cover;
+      background-image: url("/src/components/images/yes.jpeg");
+    }
+  </style>
 </head>
 
 <body class=" text-[#704a35]">
-  <include src="components/navbar1.html"></include>
+  <include src="components/navbar1.html" class="bg-red-900"></include>
 
 
 
 
 
-  <section class="relative bg-[#926f51] text-white h-screen flex items-center overflow-hidden group">
+  <section class="picture relative bg-[#926f51] text-white h-screen flex items-center overflow-hidden group">
 
 
     <div class="relative z-10 max-w-5xl mx-auto px-4">
@@ -99,13 +105,22 @@
 
 
   <section class="flex justify-center px-6 pb-16">
+    
     <div
       class="transition-transform duration-500 transform hover:scale-105 hover:rotate-1 hover:shadow-2xl fancy-border">
       <img src="/src/components/images/musicsheet.png" alt="Sheet Music" class="rounded-xl max-w-sm w-3 md:w-xl" />
     </div>
   </section>
 
-  <div class="w-full h-2 bg-[#7d583d] my-8 rounded-full"></div>
+  <div class="text-center">
+
+  <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold drop-shadow-md text-[#91684A]">
+    Our Mockup Pages
+  </h1>
+  <p class="text-base sm:text-lg font-semibold mt-3">
+    See our detailed progress in developing our business idea!
+  </p>
+  </div>
 
   <body class="bg-[#775640] text-white font-sans">
     <div class="max-w-7xl mx-auto px-4 py-12">
