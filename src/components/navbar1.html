@@ -1,86 +1,46 @@
-</style>
-<nav class="flex items-center bg-tom-thumb-600 p-3 flex-wrap bg-[#6F4E37]">
-      <a href="index.html" class="p-1 mr-4 inline-flex items-center">
-        <div>
-          <img class="h-10 md:h-20" src="/src/components/images/Logo.png" alt="the logo">
-        </div>
+<nav class="flex items-center bg-[#6F4E37] p-3 flex-wrap shadow-md">
+  <!-- Logo -->
+  <a href="index.html" class="p-1 mr-4 inline-flex items-center">
+    <img class="h-10 md:h-20" src="/src/components/images/Logo.png" alt="the logo" />
+  </a>
+
   
-      </a>
-      <button
-        class="text-white inline-flex p-3 hover:bg-gray-100 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
-        data-target="#navigation"
-      >
-        
-      </button>
-      <div
-        class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
-        id="navigation"
-      >
-        <div
-          class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto"
-        >
-          <a
-            href="index.html"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white"
-          >
-            <span>Homepage</span>
-          </a>
-          <a
-            href="MusicDragDrop.html"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white"
-          >
-            <span>Upload</span>
-          </a>
-          
-          <a
-       4     href="Lyricalnote.html"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white"
-          >
-            <span>Lyrical</span>
-          </a>
-          <a
-            href="Sheetbreakdown.html"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white"
-          >
-            <span>Sheet</span>
-          </a>
-          
-          <a
-            href="Team.html"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white"
-          >
-            <span>Team</span>
-          </a>
-          <a
-          href="Contactform.html"
-          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-white items-center justify-center hover:bg-[#b19174] hover:text-white"
-        >
-          <span>Contact</span>
-        </a>
+  <button
+    id="nav-toggle"
+    class="text-white p-3 rounded lg:hidden ml-auto focus:outline-none focus:ring-2 focus:ring-[#b19174] transition"
+    aria-label="Toggle navigation"
+    aria-controls="navigation"
+    aria-expanded="false"
+  >
+    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
 
-        </div>
-      </div>
-    </nav>
+ 
+  <div
+    id="navigation"
+    class="hidden w-full lg:inline-flex lg:flex-grow lg:w-auto"
+  >
+    <div
+      class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full flex flex-col lg:h-auto"
+    >
+      <a href="index.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white transition">Homepage</a>
+      <a href="MusicDragDrop.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white transition">Upload</a>
+      <a href="Lyricalnote.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white transition">Lyrical</a>
+      <a href="Sheetbreakdown.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white transition">Sheet</a>
+      <a href="Team.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white transition">Team</a>
+      <a href="Contactform.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded-3xl text-[#F8EDE3] items-center justify-center hover:bg-[#b19174] hover:text-white transition">Contact</a>
+    </div>
+  </div>
+</nav>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 <script>
-  $(document).ready(function() {
-  $(".nav-toggler").each(function(_, navToggler) {
-    var target = $(navToggler).data("target");
-    $(navToggler).on("click", function() {
-      $(target).animate({
-        height: "toggle"
-      });
-    });
+  
+  document.getElementById('nav-toggle').addEventListener('click', function () {
+    const nav = document.getElementById('navigation');
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('hidden');
   });
-});
-
 </script>
-
-
-
-
-
-
-
