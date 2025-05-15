@@ -24,42 +24,65 @@
     </h1>
 
 
-    <div class="bg-white text-black w-full max-w-lg p-4 sm:p-6 rounded-xl shadow-lg">
-      <p class="mb-4 text-base sm:text-lg">
-       Scanning the Fur Elis ...........
-      </p>
-
-      <textarea
-        placeholder="A – E – A – A – E – A – C – B – A – G# – A – E – A – A – E – A+E – A
+    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#f6ede6] to-[#e3d6c6] py-8">
+      <div class="bg-white/90 backdrop-blur-lg w-full max-w-xl mx-auto p-8 rounded-3xl shadow-2xl border border-[#e2cdb3] space-y-8">
         
-        Intermediate Level:
-Für Elise is typically classified as an intermediate-level piece, around grade 5 in some systems. 
+        <div class="flex items-center gap-3">
+          <svg class="w-8 h-8 text-[#9d7c5b]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-2v13"></path>
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+          </svg>
+          <h1 class="text-2xl font-extrabold text-[#7d5b3b] tracking-tight">Music Sheet Analyzer</h1>
+        </div>
+        
+        <p class="text-lg text-gray-700 leading-relaxed">
+          
+
+       Users can break down a song’s components (such as notes, chords, and key signatures) to improve their skills.
+
+        </p>
+       
+        <div>
+          <textarea
+            placeholder="A – E – A – A – E – A – C – B – A – G# – A – E – A – A – E – A+E – A
+      
+       Intermediate Level:
+Für Elise is typically classified as an intermediate-level piece, around grade 5 in some systems.
 Technical Demands:
-It requires a certain level of hand coordination, rhythm independence, and the ability to play fast scales and arpeggios. 
+It requires a certain level of hand coordination, rhythm independence, and the ability to play fast scales and arpeggios.
 Full Version:
-The full version of Für Elise is more challenging, involving more intricate playing and faster passages. 
+The full version of Für Elise is more challenging, involving more intricate playing and faster passages.
 Shortened Versions:
-Some simplified versions of Für Elise can be accessible to late beginners, but still require some practice and patience. 
+Some simplified versions of Für Elise can be accessible to late beginners, but still require some practice and patience.
 Practice and Persistence:
-Learning Für Elise, even a shortened version, requires consistent practice and attention to detail, especially regarding timing and accuracy. 
+Learning Für Elise, even a shortened version, requires consistent practice and attention to detail, especially regarding timing and accuracy.
 "
-        class="w-full h-40 p-3 sm:p-4 border border-gray-300 rounded-md resize-none mb-4 focus:outline-none focus:ring-2 focus:ring-[#9d7c5b]"
-      ></textarea>
 
-      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-2">
-        <span class="text-sm text-gray-600 text-center sm:text-left">766/5,000 characters</span>
+            class="w-full h-44 p-4 border border-[#e2cdb3] rounded-xl shadow-inner bg-[#fcf7f2] text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#9d7c5b] transition placeholder:text-gray-400 resize-none"
+            maxlength="5000"
+          ></textarea>
+          <div class="flex justify-between items-center mt-2">
+            <span class="text-xs text-gray-500">766/5,000 characters</span>
+          </div>
+        </div>
         
-        <div class="flex flex-col sm:flex-row gap-2">
-          <button class="text-sm px-4 py-2 border rounded text-[#9d7c5b] border-[#9d7c5b] hover:bg-[#9d7c5b] hover:text-white transition">
-            Upgrade
-          </button>
-          <button class="text-sm px-4 py-2 border rounded text-[#9d7c5b] border-[#9d7c5b] hover:bg-[#9d7c5b] hover:text-white transition">
-            Upload
-          </button>
-          <a href="sheetDem.html">
-            <button class="bg-[#8d6b4a] text-white px-4 py-2 rounded-md font-semibold hover:bg-[#5a3d2d] transition">
-            Scan Lyrics
-          </button>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+          <div class="flex flex-row gap-2 w-full sm:w-auto">
+            <button class="flex-1 flex items-center justify-center gap-2 text-sm px-4 py-2 border rounded-xl text-[#9d7c5b] border-[#9d7c5b] bg-white hover:bg-[#9d7c5b] hover:text-white transition font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#9d7c5b]">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path></svg>
+              Upgrade
+            </button>
+            <button class="flex-1 flex items-center justify-center gap-2 text-sm px-4 py-2 border rounded-xl text-[#9d7c5b] border-[#9d7c5b] bg-white hover:bg-[#9d7c5b] hover:text-white transition font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#9d7c5b]">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5"></path></svg>
+              Upload
+            </button>
+          </div>
+          <a href="sheetDem.html" class="w-full sm:w-auto">
+            <button class="w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-[#9d7c5b] to-[#7d5b3b] text-white px-6 py-2 rounded-xl font-bold text-base shadow-lg hover:scale-105 hover:from-[#b89b7a] hover:to-[#5a3d2d] transition-all focus:outline-none focus:ring-2 focus:ring-[#9d7c5b]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-6h6v6m-6 0h6"></path></svg>
+              Scan Lyrics
+            </button>
           </a>
         </div>
       </div>
