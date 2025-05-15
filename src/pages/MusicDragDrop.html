@@ -17,53 +17,54 @@
   <include src="components/navbar1.html" class="sticky top-0"></include>
 
 
-  <main class="max-w-6xl mx-auto px-4 py-12">
-    <div class="grid md:grid-cols-2 gap-10 items-start">
-
-      <div>
-        <h1 class="text-4xl font-extrabold text-[#5a3d2d] mb-6">Music Drag and Drop</h1>
-        <h3 class="text-xl font-medium mb-4">Whatever song or sound/style you want to learn, drag it and drop — we will
-          break it down for you!</h3>
-        <p class="text-lg font-semibold mb-8">Drag it here — we’ll give you your results</p>
-
-        <div class="flex flex-col md:flex-row items-start gap-6">
+  <main class="max-w-5xl mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Drag and Drop Section -->
+      <section>
+        <h1 class="text-4xl font-extrabold text-[#5a3d2d] mb-4 tracking-tight">Music Drag & Drop</h1>
+        <p class="text-lg text-[#7d5b3b] mb-2">Want to break down a song, sound, or style?</p>
+        <p class="text-base text-[#5a3d2d] mb-6">Just drag it here and we’ll analyze it for you!</p>
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <!-- Draggable Box -->
           <div id="dragbox" draggable="true"
-            class="w-40 h-20 flex items-center justify-center bg-[#e4c9b4] text-[#3a2d2d] font-bold rounded-xl shadow-md cursor-move hover:scale-105 transition-transform duration-300">
-            Music
+            class="w-40 h-20 flex items-center justify-center bg-gradient-to-br from-[#e4c9b4] to-[#f8ede3] text-[#3a2d2d] font-bold rounded-xl shadow-lg cursor-move hover:scale-105 transition-transform duration-300 border-2 border-[#d2b08f] select-none">
+            <svg class="w-6 h-6 mr-2 text-[#9d7c5b]" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 19V6l12-2v13"></path>
+              <circle cx="6" cy="18" r="3" />
+              <circle cx="18" cy="16" r="3" />
+            </svg>
+            Music File
           </div>
+          <!-- Drop Zone -->
           <div id="dropzone"
-            class="w-60 h-32 border-4 border-dashed border-[#9d7c5b] rounded-xl flex items-center justify-center text-[#9d7c5b] text-lg font-semibold hover:bg-[#f9f5f0] transition-colors duration-300">
-
-            Drop here
+            class="w-64 h-36 border-4 border-dashed border-[#9d7c5b] rounded-2xl flex flex-col items-center justify-center text-[#9d7c5b] text-lg font-semibold bg-[#f9f5f0] transition-all duration-300 relative hover:bg-[#f3e7d7]">
+            <svg class="w-10 h-10 mb-2 text-[#b19174]" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 4v16m8-8H4"></path>
+            </svg>
+            Drop music here
           </div>
         </div>
-      </div>
-
-
-
-      <div class="bg-[#f9f5f0] border border-[#d2b08f] rounded-l-2xl p-6 overflow-auto shadow-md">
-        <h2 class="text-2xl font-bold text-[#5a3d2d] mb-4">What is this page?</h2>
+        <p class="text-sm text-[#9d7c5b] mt-4">Supported: mp3, wav, ogg, midi</p>
+      </section>
+  
+      <!-- Info Section -->
+      <aside class="bg-gradient-to-br from-[#f9f5f0] to-[#f3e7d7] border border-[#d2b08f] rounded-2xl p-8 shadow-lg">
+        <h2 class="text-2xl font-bold text-[#5a3d2d] mb-3">What is this page?</h2>
         <p class="text-[#3a2d2d] text-base leading-relaxed">
-          This tool is designed for musicians, learners, and enthusiasts to analyze any music or sound they want to
-          understand. Simply drag and drop your music file into the left-hand area, and we’ll break it down into its
-          musical elements such as chords, rhythm, notes, and structure. A fun, easy way to learn music!
-
+          This tool is for musicians, learners, and enthusiasts to analyze any music or sound. Drag and drop your music file into the area on the left, and we’ll break it down into chords, rhythm, notes, and structure. It’s a fun, easy way to learn music!
         </p>
-      </div>
+      </aside>
     </div>
   </main>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+  
   <script>
     const dragbox = document.getElementById('dragbox');
     const dropzone = document.getElementById('dropzone');
-
+  
     dragbox.ondragstart = function (event) {
       event.dataTransfer.setData('text/plain', 'dragbox');
       const node = dragbox.cloneNode(true);
@@ -73,22 +74,19 @@
       event.dataTransfer.setDragImage(node, 100, 50);
       setTimeout(() => document.body.removeChild(node), 0);
     };
-
+  
     dropzone.ondragover = function (event) {
       event.preventDefault();
-      dropzone.classList.add('ring', 'ring-yellow-500');
+      dropzone.classList.add('ring-4', 'ring-[#b19174]', 'scale-105');
     };
-
-
-
-
+  
     dropzone.ondragleave = function (event) {
-      dropzone.classList.remove('ring', 'ring-yellow-500');
+      dropzone.classList.remove('ring-4', 'ring-[#b19174]', 'scale-105');
     };
-
+  
     dropzone.ondrop = function (event) {
       event.preventDefault();
-      dropzone.classList.remove('ring', 'ring-yellow-500');
+      dropzone.classList.remove('ring-4', 'ring-[#b19174]', 'scale-105');
       if (document.getElementById('dragbox')) {
         dropzone.appendChild(dragbox);
         dragbox.style.margin = "auto";
@@ -100,7 +98,8 @@
 
 
   
-
+<br>
+<br>
 
 <include src="components/footer.html"></include>
 </body>
